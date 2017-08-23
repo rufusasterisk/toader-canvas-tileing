@@ -206,12 +206,97 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
+  var WhiteOne = {
+    sourceX: 2030,
+    sourceY: 106,
+    sourceWidth: 24,
+    sourceHeight: 25,
+  }
+
+  var WhiteTwo = {
+    sourceX: 2083,
+    sourceY: 106,
+    sourceWidth: 24,
+    sourceHeight: 25,
+  }
+
+  var WhiteDash = {
+    sourceX: 2297,
+    sourceY: 266,
+    sourceWidth: 24,
+    sourceHeight: 25,
+  }
+
+  var WhiteU = {
+    sourceX: 1976,
+    sourceY: 266,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteP = {
+    sourceX: 2242,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteO = {
+    sourceX: 2189,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteR = {
+    sourceX: 2349,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteS = {
+    sourceX: 2403,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteH = {
+    sourceX: 2349,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteI = {
+    sourceX: 2405,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteE = {
+    sourceX: 2192,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteC = {
+    sourceX: 2083,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  let testObject = WhiteC;
   destinationX = 10;
   destinationY = 720;
-  destinationWidth = RedNine.sourceWidth;
-  destinationHeight = RedNine.sourceHeight;
+  destinationWidth = testObject.sourceWidth;
+  destinationHeight = testObject.sourceHeight;
 
-  context.drawImage(image, RedNine.sourceX, RedNine.sourceY, RedNine.sourceWidth, RedNine.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
+  context.drawImage(image, testObject.sourceX, testObject.sourceY, testObject.sourceWidth, testObject.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
   // context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX + 27, destinationY, destinationWidth, destinationHeight)
 
   function drawBlock(Block, startX, startY, counter) {
