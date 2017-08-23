@@ -12,6 +12,118 @@ var destinationY = 575;
 var destinationWidth = sourceWidth;
 var destinationHeight = sourceHeight;
 
+var RedZero = {
+  sourceX: 1977,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedOne = {
+  sourceX: 2031,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedTwo = {
+  sourceX: 2083,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedThree = {
+  sourceX: 2137,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedFour = {
+  sourceX: 2189,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedFive = {
+  sourceX: 2243,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedSix = {
+  sourceX: 2297,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedSeven = {
+  sourceX: 2350,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedEight = {
+  sourceX: 2403,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedNine = {
+  sourceX: 2457,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+function drawScore(image, score, destinationX, destinationY) {
+  let scoreArray = score.toString().split("");
+  while (scoreArray.length < 5) {
+    scoreArray.unshift('0');
+  }
+  scoreArray.forEach(function(number, i) {
+    let myObject = {};
+    switch (number) {
+      case '0':
+        myObject = RedZero;
+        break;
+      case '1':
+        myObject = RedOne;
+        break;
+      case '2':
+        myObject = RedTwo;
+        break;
+      case '3':
+        myObject = RedThree;
+        break;
+      case '4':
+        myObject = RedFour;
+        break;
+      case '5':
+        myObject = RedFive;
+        break;
+      case '6':
+        myObject = RedSix;
+        break;
+      case '7':
+        myObject = RedSeven;
+        break;
+      case '8':
+        myObject = RedEight;
+        break;
+      case '9':
+        myObject = RedNine;
+        break;
+    }
+    context.drawImage(image, myObject.sourceX, myObject.sourceY, myObject.sourceWidth, myObject.sourceHeight, destinationX + 25 * i, destinationY, myObject.sourceWidth, myObject.sourceHeight)
+  })
+}
 
 // context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
 // console.log('hello javascript');
@@ -94,12 +206,12 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
-  destinationX = 120;
-  destinationY = 2;
-  destinationWidth = Center.sourceWidth;
-  destinationHeight = Center.sourceHeight;
+  destinationX = 10;
+  destinationY = 720;
+  destinationWidth = RedNine.sourceWidth;
+  destinationHeight = RedNine.sourceHeight;
 
-  //context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
+  context.drawImage(image, RedNine.sourceX, RedNine.sourceY, RedNine.sourceWidth, RedNine.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
   // context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX + 27, destinationY, destinationWidth, destinationHeight)
 
   function drawBlock(Block, startX, startY, counter) {
