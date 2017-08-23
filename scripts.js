@@ -24,14 +24,11 @@ window.onload = function() {
   context.fillStyle = 'black';
   context.fillRect(0, 375, 1000, 200);
 
-  context.fillStyle = 'green';
-  context.fillRect(0, 25, canvas.width, 50);
-
-  context.fillStyle = 'green';
-  context.fillRect(0, 0, canvas.width, 25);
+  context.fillStyle = '#000047';
+  context.fillRect(0, 75, canvas.width, 250);
 
   for (i = 0; i < 5; i++) {
-    context.fillStyle = 'black';
+    context.fillStyle = '#000047';
     context.fillRect(36.5 + (215 * i), 25, 67, 50)
   }
 
@@ -102,13 +99,17 @@ window.onload = function() {
   destinationWidth = Center.sourceWidth;
   destinationHeight = Center.sourceHeight;
 
-  context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
+  //context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
   // context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX + 27, destinationY, destinationWidth, destinationHeight)
 
   function drawBlock(Block, startX, startY, counter) {
     for (i = 0; i < counter; i++) {
       context.drawImage(image, Block.sourceX, Block.sourceY, Block.sourceWidth, Block.sourceHeight, startX + (215 * i), startY, Block.sourceWidth, Block.sourceHeight)
     }
+  }
+
+  for (var i = 0; i < 41; i++) {
+    context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, ((Center.sourceWidth * i)-9), -5, Center.sourceWidth, Center.sourceHeight)
   }
 
   drawBlock(BottomRight, 17, 55, 5);
@@ -131,6 +132,135 @@ window.onload = function() {
   drawBlock(Center, 145, 2, 5);
   drawBlock(Center, 170, 2, 5);
   drawBlock(Center, -20, 2, 5);
-  drawBlock(Center, 5, 2, 5)
+  drawBlock(Center, 5, 2, 5);
   drawBlock(TopRight, 97, 2, 5);
+
+var Tractor = {
+  sourceX: 138,
+  sourceY: 1127,
+  sourceWidth: 45,
+  sourceHeight: 40,
+
+  destinationX: 0,
+  destinationY: 527,
+  destinationWidth: 45,
+  destinationHeight: 40,
+}
+
+context.drawImage(image, Tractor.sourceX, Tractor.sourceY, Tractor.sourceWidth, Tractor.sourceHeight, Tractor.destinationX, Tractor.destinationY, Tractor.destinationWidth, Tractor.destinationHeight);
+
+var SlowCar = {
+  sourceX: 350,
+  sourceY: 1130,
+  sourceWidth: 50,
+  sourceHeight: 33,
+
+  destinationX: 0,
+  destinationY: 477,
+  destinationWidth: 50,
+  destinationHeight: 33,
+}
+
+context.drawImage(image, SlowCar.sourceX, SlowCar.sourceY, SlowCar.sourceWidth, SlowCar.sourceHeight, SlowCar.destinationX, SlowCar.destinationY, SlowCar.destinationWidth, SlowCar.destinationHeight);
+
+var FastCar = {
+  sourceX: 57,
+  sourceY: 1123,
+  sourceWidth: 50,
+  sourceHeight: 47,
+
+  destinationX: 0,
+  destinationY: 427,
+  destinationWidth: 50,
+  destinationHeight: 47,
+}
+
+context.drawImage(image, FastCar.sourceX, FastCar.sourceY, FastCar.sourceWidth, FastCar.sourceHeight, FastCar.destinationX, FastCar.destinationY, FastCar.destinationWidth, FastCar.destinationHeight);
+
+var Semi = {
+  sourceX: 223,
+  sourceY: 1130,
+  sourceWidth: 90,
+  sourceHeight: 33,
+
+  destinationX: 0,
+  destinationY: 377,
+  destinationWidth: 90,
+  destinationHeight: 33,
+}
+
+context.drawImage(image, Semi.sourceX, Semi.sourceY, Semi.sourceWidth, Semi.sourceHeight, Semi.destinationX, Semi.destinationY, Semi.destinationWidth, Semi.destinationHeight);
+
+var TurtleSub = {
+  sourceX: 1397,
+  sourceY: 1824,
+  sourceWidth: 140,
+  sourceHeight: 33,
+
+  destinationX: 0,
+  destinationY: 277,
+  destinationWidth: 140,
+  destinationHeight: 36,
+}
+context.drawImage(image, TurtleSub.sourceX, TurtleSub.sourceY, TurtleSub.sourceWidth, TurtleSub.sourceHeight, TurtleSub.destinationX, TurtleSub.destinationY, TurtleSub.destinationWidth, TurtleSub.destinationHeight);
+
+
+var Turtle = {
+  sourceX: 1443,
+  sourceY: 491,
+  sourceWidth: 207,
+  sourceHeight: 36,
+
+  destinationX: 0,
+  destinationY: 127,
+  destinationWidth: 207,
+  destinationHeight: 36,
+}
+
+context.drawImage(image, Turtle.sourceX, Turtle.sourceY, Turtle.sourceWidth, Turtle.sourceHeight, Turtle.destinationX, Turtle.destinationY, Turtle.destinationWidth, Turtle.destinationHeight);
+
+var Log = {
+  sourceX: 1663,
+  sourceY: 1023,
+  sourceWidth: 140,
+  sourceHeight: 34,
+
+  destinationX: 0,
+  destinationY: 227,
+  destinationWidth: 140,
+  destinationHeight: 34,
+}
+
+context.drawImage(image, Log.sourceX, Log.sourceY, Log.sourceWidth, Log.sourceHeight, Log.destinationX, Log.destinationY, Log.destinationWidth, Log.destinationHeight);
+
+var LogLong = {
+  sourceX: 1397,
+  sourceY: 1717,
+  sourceWidth: 300,
+  sourceHeight: 33,
+
+  destinationX: 0,
+  destinationY: 177,
+  destinationWidth: 300,
+  destinationHeight: 33,
+}
+
+context.drawImage(image, LogLong.sourceX, LogLong.sourceY, LogLong.sourceWidth, LogLong.sourceHeight, LogLong.destinationX, LogLong.destinationY, LogLong.destinationWidth, LogLong.destinationHeight);
+
+var LogOneHalf = {
+  sourceX: 1557,
+  sourceY: 1611,
+  sourceWidth: 193,
+  sourceHeight: 33,
+
+  destinationX: 0,
+  destinationY: 77,
+  destinationWidth: 193,
+  destinationHeight: 33,
+}
+
+context.drawImage(image, LogOneHalf.sourceX, LogOneHalf.sourceY, LogOneHalf.sourceWidth, LogOneHalf.sourceHeight, LogOneHalf.destinationX, LogOneHalf.destinationY, LogOneHalf.destinationWidth, LogOneHalf.destinationHeight);
+
+
+
 }
