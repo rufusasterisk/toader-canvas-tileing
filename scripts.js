@@ -346,7 +346,21 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
-  let testObject = RedE;
+  var ExtraToad = {
+    sourceX: 750,
+    sourceY: 57,
+    sourceWidth: 23,
+    sourceHeight: 23,
+  }
+
+  var OtherThing = {
+    sourceX: 700,
+    sourceY: 57,
+    sourceWidth: 17,
+    sourceHeight: 20,
+  }
+
+  let testObject = OtherThing;
   destinationX = 10;
   destinationY = 720;
   destinationWidth = testObject.sourceWidth;
