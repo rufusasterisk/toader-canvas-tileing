@@ -195,30 +195,72 @@ context.drawImage(image, Semi.sourceX, Semi.sourceY, Semi.sourceWidth, Semi.sour
 var TurtleSub = {
   sourceX: 1397,
   sourceY: 1824,
-  sourceWidth: 140,
+  sourceWidth: 33,
   sourceHeight: 33,
 
   destinationX: 0,
   destinationY: 277,
-  destinationWidth: 140,
-  destinationHeight: 36,
+  destinationWidth: 33,
+  destinationHeight: 33,
 }
 context.drawImage(image, TurtleSub.sourceX, TurtleSub.sourceY, TurtleSub.sourceWidth, TurtleSub.sourceHeight, TurtleSub.destinationX, TurtleSub.destinationY, TurtleSub.destinationWidth, TurtleSub.destinationHeight);
 
+var TurtleSub3 = {
+  sourceX: 1790,
+  sourceY: 487,
+  sourceWidth: 47,
+  sourceHeight: 43,
 
-var Turtle = {
+  destinationX: 50,
+  destinationY: 277,
+  destinationWidth: 47,
+  destinationHeight: 43,
+}
+context.drawImage(image, TurtleSub3.sourceX, TurtleSub3.sourceY, TurtleSub3.sourceWidth, TurtleSub3.sourceHeight, TurtleSub3.destinationX, TurtleSub3.destinationY, TurtleSub3.destinationWidth, TurtleSub3.destinationHeight);
+
+
+var Turtle1 = {
   sourceX: 1443,
-  sourceY: 491,
-  sourceWidth: 207,
-  sourceHeight: 36,
+  sourceY: 493,
+  sourceWidth: 44,
+  sourceHeight: 30,
 
   destinationX: 0,
   destinationY: 127,
-  destinationWidth: 207,
-  destinationHeight: 36,
+  destinationWidth: 44,
+  destinationHeight: 30,
 }
 
-context.drawImage(image, Turtle.sourceX, Turtle.sourceY, Turtle.sourceWidth, Turtle.sourceHeight, Turtle.destinationX, Turtle.destinationY, Turtle.destinationWidth, Turtle.destinationHeight);
+context.drawImage(image, Turtle1.sourceX, Turtle1.sourceY, Turtle1.sourceWidth, Turtle1.sourceHeight, Turtle1.destinationX, Turtle1.destinationY, Turtle1.destinationWidth, Turtle1.destinationHeight);
+
+var Turtle2 = {
+  sourceX: 1520,
+  sourceY: 490,
+  sourceWidth: 50,
+  sourceHeight: 37,
+
+  destinationX: 75,
+  destinationY: 127,
+  destinationWidth: 50,
+  destinationHeight: 37,
+}
+
+context.drawImage(image, Turtle2.sourceX, Turtle2.sourceY, Turtle2.sourceWidth, Turtle2.sourceHeight, Turtle2.destinationX, Turtle2.destinationY, Turtle2.destinationWidth, Turtle2.destinationHeight);
+
+var Turtle3 = {
+  sourceX: 1600,
+  sourceY: 490,
+  sourceWidth: 50,
+  sourceHeight: 37,
+
+  destinationX: 150,
+  destinationY: 127,
+  destinationWidth: 50,
+  destinationHeight: 37,
+}
+
+context.drawImage(image, Turtle3.sourceX, Turtle3.sourceY, Turtle3.sourceWidth, Turtle3.sourceHeight, Turtle3.destinationX, Turtle3.destinationY, Turtle3.destinationWidth, Turtle3.destinationHeight);
+
 
 var Log = {
   sourceX: 1663,
@@ -263,19 +305,144 @@ var LogOneHalf = {
 context.drawImage(image, LogOneHalf.sourceX, LogOneHalf.sourceY, LogOneHalf.sourceWidth, LogOneHalf.sourceHeight, LogOneHalf.destinationX, LogOneHalf.destinationY, LogOneHalf.destinationWidth, LogOneHalf.destinationHeight);
 
 var Toad1 = {
-  sourceX: 1557,
-  sourceY: 1611,
-  sourceWidth: 193,
-  sourceHeight: 33,
+  sourceX: 63,
+  sourceY: 62,
+  sourceWidth: 37,
+  sourceHeight: 38,
 
-  destinationX: 0,
-  destinationY: 77,
-  destinationWidth: 193,
-  destinationHeight: 33,
+  destinationX: 250,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 38,
 }
 
 context.drawImage(toadImage, Toad1.sourceX, Toad1.sourceY, Toad1.sourceWidth, Toad1.sourceHeight, Toad1.destinationX, Toad1.destinationY, Toad1.destinationWidth, Toad1.destinationHeight);
 
+var Toad2 = {
+  sourceX: 145,
+  sourceY: 62,
+  sourceWidth: 30,
+  sourceHeight: 35,
+
+  destinationX: 300,
+  destinationY: 575,
+  destinationWidth: 30,
+  destinationHeight: 35,
+}
+
+context.drawImage(toadImage, Toad2.sourceX, Toad2.sourceY, Toad2.sourceWidth, Toad2.sourceHeight, Toad2.destinationX, Toad2.destinationY, Toad2.destinationWidth, Toad2.destinationHeight);
+
+var Toad3 = {
+  sourceX: 221,
+  sourceY: 62,
+  sourceWidth: 37,
+  sourceHeight: 30,
+
+  destinationX: 350,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 30,
+}
+
+context.drawImage(toadImage, Toad3.sourceX, Toad3.sourceY, Toad3.sourceWidth, Toad3.sourceHeight, Toad3.destinationX, Toad3.destinationY, Toad3.destinationWidth, Toad3.destinationHeight);
+
+var Toad1H = {
+  sourceX: 302,
+  sourceY: 62,
+  sourceWidth: 37,
+  sourceHeight: 37,
+
+  destinationX: 400,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 37,
+}
+
+context.drawImage(toadImage, Toad1H.sourceX, Toad1H.sourceY, Toad1H.sourceWidth, Toad1H.sourceHeight, Toad1H.destinationX, Toad1H.destinationY, Toad1H.destinationWidth, Toad1H.destinationHeight);
+
+var Toad2H = {
+  sourceX: 382,
+  sourceY: 64,
+  sourceWidth: 37,
+  sourceHeight: 30,
+
+  destinationX: 450,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 30,
+}
+
+context.drawImage(toadImage, Toad2H.sourceX, Toad2H.sourceY, Toad2H.sourceWidth, Toad2H.sourceHeight, Toad2H.destinationX, Toad2H.destinationY, Toad2H.destinationWidth, Toad2H.destinationHeight);
+
+var Toad3H = {
+  sourceX: 457,
+  sourceY: 60,
+  sourceWidth: 35,
+  sourceHeight: 36,
+
+  destinationX: 500,
+  destinationY: 575,
+  destinationWidth: 35,
+  destinationHeight: 36,
+}
+
+context.drawImage(toadImage, Toad3H.sourceX, Toad3H.sourceY, Toad3H.sourceWidth, Toad3H.sourceHeight, Toad3H.destinationX, Toad3H.destinationY, Toad3H.destinationWidth, Toad3H.destinationHeight);
+
+var ToadSafe1 = {
+  sourceX: 1627,
+  sourceY: 587,
+  sourceWidth: 53,
+  sourceHeight: 53,
+
+  destinationX: 44,
+  destinationY: 26,
+  destinationWidth: 53,
+  destinationHeight: 53,
+}
+
+context.drawImage(image, ToadSafe1.sourceX, ToadSafe1.sourceY, ToadSafe1.sourceWidth, ToadSafe1.sourceHeight, ToadSafe1.destinationX, ToadSafe1.destinationY, ToadSafe1.destinationWidth, ToadSafe1.destinationHeight);
+
+var ToadSafe2 = {
+  sourceX: 1706,
+  sourceY: 587,
+  sourceWidth: 53,
+  sourceHeight: 53,
+
+  destinationX: 258,
+  destinationY: 26,
+  destinationWidth: 53,
+  destinationHeight: 53,
+}
+
+context.drawImage(image, ToadSafe2.sourceX, ToadSafe2.sourceY, ToadSafe2.sourceWidth, ToadSafe2.sourceHeight, ToadSafe2.destinationX, ToadSafe2.destinationY, ToadSafe2.destinationWidth, ToadSafe2.destinationHeight);
+
+var DeadFrogBlk = {
+  sourceX: 57,
+  sourceY: 373,
+  sourceWidth: 50,
+  sourceHeight: 54,
+
+  destinationX: 258,
+  destinationY: 426,
+  destinationWidth: 50,
+  destinationHeight: 54,
+}
+
+context.drawImage(image, DeadFrogBlk.sourceX, DeadFrogBlk.sourceY, DeadFrogBlk.sourceWidth, DeadFrogBlk.sourceHeight, DeadFrogBlk.destinationX, DeadFrogBlk.destinationY, DeadFrogBlk.destinationWidth, DeadFrogBlk.destinationHeight);
+
+var DeadFrogBlue = {
+  sourceX: 1337,
+  sourceY: 373,
+  sourceWidth: 50,
+  sourceHeight: 54,
+
+  destinationX: 258,
+  destinationY: 226,
+  destinationWidth: 50,
+  destinationHeight: 54,
+}
+
+context.drawImage(image, DeadFrogBlue.sourceX, DeadFrogBlue.sourceY, DeadFrogBlue.sourceWidth, DeadFrogBlue.sourceHeight, DeadFrogBlue.destinationX, DeadFrogBlue.destinationY, DeadFrogBlue.destinationWidth, DeadFrogBlue.destinationHeight);
 
 
 }
