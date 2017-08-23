@@ -12,6 +12,118 @@ var destinationY = 575;
 var destinationWidth = sourceWidth;
 var destinationHeight = sourceHeight;
 
+var RedZero = {
+  sourceX: 1977,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedOne = {
+  sourceX: 2031,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedTwo = {
+  sourceX: 2083,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedThree = {
+  sourceX: 2137,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedFour = {
+  sourceX: 2189,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedFive = {
+  sourceX: 2243,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedSix = {
+  sourceX: 2297,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedSeven = {
+  sourceX: 2350,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedEight = {
+  sourceX: 2403,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+var RedNine = {
+  sourceX: 2457,
+  sourceY: 532,
+  sourceWidth: 24,
+  sourceHeight: 25,
+}
+
+function drawScore(image, score, destinationX, destinationY) {
+  let scoreArray = score.toString().split("");
+  while (scoreArray.length < 5) {
+    scoreArray.unshift('0');
+  }
+  scoreArray.forEach(function(number, i) {
+    let myObject = {};
+    switch (number) {
+      case '0':
+        myObject = RedZero;
+        break;
+      case '1':
+        myObject = RedOne;
+        break;
+      case '2':
+        myObject = RedTwo;
+        break;
+      case '3':
+        myObject = RedThree;
+        break;
+      case '4':
+        myObject = RedFour;
+        break;
+      case '5':
+        myObject = RedFive;
+        break;
+      case '6':
+        myObject = RedSix;
+        break;
+      case '7':
+        myObject = RedSeven;
+        break;
+      case '8':
+        myObject = RedEight;
+        break;
+      case '9':
+        myObject = RedNine;
+        break;
+    }
+    context.drawImage(image, myObject.sourceX, myObject.sourceY, myObject.sourceWidth, myObject.sourceHeight, destinationX + 25 * i, destinationY, myObject.sourceWidth, myObject.sourceHeight)
+  })
+}
 
 // context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
 // console.log('hello javascript');
@@ -94,12 +206,167 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
-  destinationX = 120;
-  destinationY = 2;
-  destinationWidth = Center.sourceWidth;
-  destinationHeight = Center.sourceHeight;
+  var WhiteOne = {
+    sourceX: 2030,
+    sourceY: 106,
+    sourceWidth: 24,
+    sourceHeight: 25,
+  }
 
-  //context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
+  var WhiteTwo = {
+    sourceX: 2083,
+    sourceY: 106,
+    sourceWidth: 24,
+    sourceHeight: 25,
+  }
+
+  var WhiteDash = {
+    sourceX: 2297,
+    sourceY: 266,
+    sourceWidth: 24,
+    sourceHeight: 25,
+  }
+
+  var WhiteU = {
+    sourceX: 1976,
+    sourceY: 266,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteP = {
+    sourceX: 2242,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteH = {
+    sourceX: 2349,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteI = {
+    sourceX: 2405,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteS = {
+    sourceX: 2403,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteC = {
+    sourceX: 2083,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteO = {
+    sourceX: 2189,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteR = {
+    sourceX: 2349,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteE = {
+    sourceX: 2192,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var YellowT = {
+    sourceX: 1178,
+    sourceY: 426,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var YellowI = {
+    sourceX: 1125,
+    sourceY: 372,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var YellowM = {
+    sourceX: 803,
+    sourceY: 426,
+    sourceWidth: 25,
+    sourceHeight: 26
+  }
+
+  var YellowE = {
+    sourceX: 912,
+    sourceY: 372,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var RedT = {
+    sourceX: 1178,
+    sourceY: 638,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var RedI = {
+    sourceX: 1125,
+    sourceY: 585,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var RedM = {
+    sourceX: 803,
+    sourceY: 638,
+    sourceWidth: 25,
+    sourceHeight: 26
+  }
+
+  var RedE = {
+    sourceX: 912,
+    sourceY: 585,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var ExtraToad = {
+    sourceX: 750,
+    sourceY: 57,
+    sourceWidth: 23,
+    sourceHeight: 23,
+  }
+
+  var OtherThing = {
+    sourceX: 700,
+    sourceY: 57,
+    sourceWidth: 17,
+    sourceHeight: 20,
+  }
+
+  let testObject = OtherThing;
+  destinationX = 10;
+  destinationY = 720;
+  destinationWidth = testObject.sourceWidth;
+  destinationHeight = testObject.sourceHeight;
+
+  context.drawImage(image, testObject.sourceX, testObject.sourceY, testObject.sourceWidth, testObject.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
   // context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX + 27, destinationY, destinationWidth, destinationHeight)
 
   function drawBlock(Block, startX, startY, counter) {
