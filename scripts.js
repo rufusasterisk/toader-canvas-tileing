@@ -1,6 +1,7 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var image = document.getElementById('source');
+var toadImage = document.getElementById('toadSource');
 
 var sourceX = 53;
 var sourceY = 480;
@@ -260,6 +261,20 @@ var LogOneHalf = {
 }
 
 context.drawImage(image, LogOneHalf.sourceX, LogOneHalf.sourceY, LogOneHalf.sourceWidth, LogOneHalf.sourceHeight, LogOneHalf.destinationX, LogOneHalf.destinationY, LogOneHalf.destinationWidth, LogOneHalf.destinationHeight);
+
+var Toad1 = {
+  sourceX: 1557,
+  sourceY: 1611,
+  sourceWidth: 193,
+  sourceHeight: 33,
+
+  destinationX: 0,
+  destinationY: 77,
+  destinationWidth: 193,
+  destinationHeight: 33,
+}
+
+context.drawImage(toadImage, Toad1.sourceX, Toad1.sourceY, Toad1.sourceWidth, Toad1.sourceHeight, Toad1.destinationX, Toad1.destinationY, Toad1.destinationWidth, Toad1.destinationHeight);
 
 
 
