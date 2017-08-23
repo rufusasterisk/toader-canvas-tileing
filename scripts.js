@@ -241,27 +241,6 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
-  var WhiteO = {
-    sourceX: 2189,
-    sourceY: 212,
-    sourceWidth: 25,
-    sourceHeight: 26,
-  }
-
-  var WhiteR = {
-    sourceX: 2349,
-    sourceY: 212,
-    sourceWidth: 25,
-    sourceHeight: 26,
-  }
-
-  var WhiteS = {
-    sourceX: 2403,
-    sourceY: 212,
-    sourceWidth: 25,
-    sourceHeight: 26,
-  }
-
   var WhiteH = {
     sourceX: 2349,
     sourceY: 158,
@@ -276,9 +255,9 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
-  var WhiteE = {
-    sourceX: 2192,
-    sourceY: 158,
+  var WhiteS = {
+    sourceX: 2403,
+    sourceY: 212,
     sourceWidth: 25,
     sourceHeight: 26,
   }
@@ -290,7 +269,84 @@ window.onload = function() {
     sourceHeight: 26,
   }
 
-  let testObject = WhiteC;
+  var WhiteO = {
+    sourceX: 2189,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteR = {
+    sourceX: 2349,
+    sourceY: 212,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var WhiteE = {
+    sourceX: 2192,
+    sourceY: 158,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var YellowT = {
+    sourceX: 1178,
+    sourceY: 426,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var YellowI = {
+    sourceX: 1125,
+    sourceY: 372,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var YellowM = {
+    sourceX: 803,
+    sourceY: 426,
+    sourceWidth: 25,
+    sourceHeight: 26
+  }
+
+  var YellowE = {
+    sourceX: 912,
+    sourceY: 372,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var RedT = {
+    sourceX: 1178,
+    sourceY: 638,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var RedI = {
+    sourceX: 1125,
+    sourceY: 585,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  var RedM = {
+    sourceX: 803,
+    sourceY: 638,
+    sourceWidth: 25,
+    sourceHeight: 26
+  }
+
+  var RedE = {
+    sourceX: 912,
+    sourceY: 585,
+    sourceWidth: 25,
+    sourceHeight: 26,
+  }
+
+  let testObject = RedE;
   destinationX = 10;
   destinationY = 720;
   destinationWidth = testObject.sourceWidth;
