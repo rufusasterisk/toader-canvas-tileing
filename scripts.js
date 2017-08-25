@@ -126,6 +126,12 @@ function drawScore(image, score, destinationX, destinationY) {
   })
 }
 
+  function drawText(myText){
+    context.font = "36px Georgia";
+    context.fillStyle = 'black';
+    context.fillText(myText, 10, 720);
+  }
+
 // context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
 // console.log('hello javascript');
 
@@ -367,7 +373,12 @@ window.onload = function() {
   destinationWidth = testObject.sourceWidth;
   destinationHeight = testObject.sourceHeight;
 
-  context.drawImage(image, testObject.sourceX, testObject.sourceY, testObject.sourceWidth, testObject.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
+  context.font = '36px "Press Start 2P"';
+  // context.font = "Press Start 2P"
+  context.fillStyle = 'black';
+  context.fillText("TOADER", 10, 720);
+
+  // context.drawImage(image, testObject.sourceX, testObject.sourceY, testObject.sourceWidth, testObject.sourceHeight, destinationX, destinationY, destinationWidth, destinationHeight)
   // context.drawImage(image, Center.sourceX, Center.sourceY, Center.sourceWidth, Center.sourceHeight, destinationX + 27, destinationY, destinationWidth, destinationHeight)
 
   function drawBlock(Block, startX, startY, counter) {
@@ -571,6 +582,20 @@ var LogOneHalf = {
 
 context.drawImage(image, LogOneHalf.sourceX, LogOneHalf.sourceY, LogOneHalf.sourceWidth, LogOneHalf.sourceHeight, LogOneHalf.destinationX, LogOneHalf.destinationY, LogOneHalf.destinationWidth, LogOneHalf.destinationHeight);
 
+function toadJumpUp(){
+  setTimeout(drawToad(Toad1), 35);
+  setTimeout(drawToad(Toad2), 35);
+  setTimeout(drawToad(Toad3), 35);
+  setTimeout(drawToad(Toad2), 35);
+  setTimeout(drawToad(toad1), 35);
+}
+
+function drawToad(whichToad) {
+  destinationX = 500;
+  destinationY = 375;
+  context.drawImage(toadImage, whichToad.sourceX, whichToad.sourceY, whichToad.sourceWidth, whichToad.sourceHeight, destinationX, destinationY, whichToad.destinationWidth, whichToad.destinationHeight);
+}
+
 var Toad1 = {
   sourceX: 63,
   sourceY: 62,
@@ -712,4 +737,165 @@ var DeadFrogBlue = {
 context.drawImage(image, DeadFrogBlue.sourceX, DeadFrogBlue.sourceY, DeadFrogBlue.sourceWidth, DeadFrogBlue.sourceHeight, DeadFrogBlue.destinationX, DeadFrogBlue.destinationY, DeadFrogBlue.destinationWidth, DeadFrogBlue.destinationHeight);
 
 
+}
+
+var frameTick = 0;
+var rotation = 0;
+
+function runAnimation(){
+  requestAnimationFrame(function animateLoop(){
+    toadJumpUp();
+    requestAnimationFrame(animateLoop);
+  })
+}
+
+function toadJumpUp(){
+  frameTick ++;
+  let myToadFrame;
+  let targetX = 500
+  let targetY = 500;
+  let targetHX = 450;
+  let targetHY = 450
+  if (frameTick > -1) {
+    myToadFrame = Toad3;
+    myToadHFrame = Toad3H;
+  }
+  if (frameTick > 100) {
+    myToadFrame = Toad2;
+    myToadHFrame = Toad2H;
+  }
+  // if (frameTick > 105) {
+  //   myToadFrame = Toad1;
+  // }
+  if (frameTick > 105){
+    myToadFrame = Toad1;
+    myToadHFrame = Toad1H;
+    context.fillStyle = 'black'
+    context.fillRect(targetX, targetY, 67, 50)
+    context.fillRect(targetHX, targetHY, 67, 50)
+    targetY = 475;
+    targetHX = 416.5;
+  }
+  if (frameTick > 110) {
+    myToadFrame = Toad2;
+    myToadHFrame = Toad2H
+    context.fillStyle = 'black'
+    context.fillRect(targetX, targetY, 67, 50)
+    context.fillRect(targetHX, targetHY, 67, 50)
+    targetY = 450;
+    targetHX = 383;
+  }
+  if (frameTick > 115) {
+    myToadFrame = Toad3;
+    myToadHFrame = Toad3H;
+    targetY = 450;
+    targetHX = 383;
+  }
+  if (frameTick > 215){
+    context.fillStyle = 'black'
+    context.fillRect(500, 450, 50,50)
+    context.fillRect(targetHX, targetHY, 67, 50)
+    targetY = 500;
+    targetHX = 450;
+    frameTick = 0;
+  }
+  // if (frameTick > 215){
+  //   rotation = Math.pi;
+  //   myToadFrame = Toad3H;
+  // }
+  drawToad(myToadFrame, targetX, targetY);
+  drawHToad(myToadHFrame, targetHX, targetHY)
+}
+
+function drawToad(whichToad, x, y) {
+  let destinationX = x;
+  let destinationY = y;
+  context.fillStyle = 'black'
+  context.fillRect(destinationX, destinationY, 50,50)
+  // context.translate(x, y)
+  // context.rotate(rotation);
+  context.drawImage(toadImage, whichToad.sourceX, whichToad.sourceY, whichToad.sourceWidth, whichToad.sourceHeight, destinationX, destinationY, whichToad.destinationWidth, whichToad.destinationHeight);
+}
+
+function drawHToad(whichToad, x, y) {
+  let destinationX = x;
+  let destinationY = y;
+  context.fillStyle = 'black'
+  context.fillRect(destinationX, destinationY, 50,50)
+  // context.translate(x, y)
+  // context.rotate(rotation);
+  context.drawImage(toadImage, whichToad.sourceX, whichToad.sourceY, whichToad.sourceWidth, whichToad.sourceHeight, destinationX, destinationY, whichToad.destinationWidth, whichToad.destinationHeight);
+}
+
+var Toad1 = {
+  sourceX: 63,
+  sourceY: 62,
+  sourceWidth: 37,
+  sourceHeight: 38,
+
+  destinationX: 250,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 38,
+}
+
+
+var Toad2 = {
+  sourceX: 145,
+  sourceY: 62,
+  sourceWidth: 30,
+  sourceHeight: 35,
+
+  destinationX: 300,
+  destinationY: 575,
+  destinationWidth: 30,
+  destinationHeight: 35,
+}
+
+var Toad3 = {
+  sourceX: 221,
+  sourceY: 62,
+  sourceWidth: 37,
+  sourceHeight: 30,
+
+  destinationX: 350,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 30,
+}
+
+var Toad1H = {
+  sourceX: 302,
+  sourceY: 62,
+  sourceWidth: 37,
+  sourceHeight: 37,
+
+  destinationX: 400,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 37,
+}
+
+var Toad2H = {
+  sourceX: 382,
+  sourceY: 64,
+  sourceWidth: 37,
+  sourceHeight: 30,
+
+  destinationX: 450,
+  destinationY: 575,
+  destinationWidth: 37,
+  destinationHeight: 30,
+}
+
+var Toad3H = {
+  sourceX: 457,
+  sourceY: 60,
+  sourceWidth: 35,
+  sourceHeight: 36,
+
+  destinationX: 500,
+  destinationY: 575,
+  destinationWidth: 35,
+  destinationHeight: 36,
 }
