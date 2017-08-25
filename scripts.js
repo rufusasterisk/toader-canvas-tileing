@@ -941,3 +941,5 @@ var Toad3R = {
   sourceWidth: 35,
   sourceHeight: 38,
 }
+
+runAnimation();
