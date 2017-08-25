@@ -597,9 +597,9 @@ function drawToad(whichToad) {
 }
 
 var Toad1 = {
-  sourceX: 63,
+  sourceX: 62,
   sourceY: 62,
-  sourceWidth: 37,
+  sourceWidth: 38,
   sourceHeight: 38,
 
   destinationX: 250,
@@ -745,157 +745,199 @@ var rotation = 0;
 function runAnimation(){
   requestAnimationFrame(function animateLoop(){
     toadJumpUp();
+    // toadJumpLeft();
+    // toadJumpDown();
+    // toadJumpRight();
     requestAnimationFrame(animateLoop);
   })
 }
 
-function toadJumpUp(){
+function toadJumpUp() {
   frameTick ++;
-  let myToadFrame;
-  let targetX = 500
-  let targetY = 500;
-  let targetHX = 450;
-  let targetHY = 450
+  let myToadUFrame;
+  let myToadLFrame;
+  let myToadDFrame;
+  let myToadRFrame;
+  let targetUX = 500
+  let targetUY = 500;
+  let targetLX = 450;
+  let targetLY = 450
+  let targetDX = 567;
+  let targetDY = 450;
+  let targetRX = 383;
+  let targetRY = 500;
+
+
+
   if (frameTick > -1) {
-    myToadFrame = Toad3;
-    myToadHFrame = Toad3H;
+    myToadUFrame = Toad3U;
+    myToadLFrame = Toad3L;
+    myToadDFrame = Toad3D;
+    myToadRFrame = Toad3R;
   }
   if (frameTick > 100) {
-    myToadFrame = Toad2;
-    myToadHFrame = Toad2H;
+    myToadUFrame = Toad2U;
+    myToadLFrame = Toad2L;
+    myToadDFrame = Toad2D;
+    myToadRFrame = Toad2R;
   }
   // if (frameTick > 105) {
   //   myToadFrame = Toad1;
   // }
-  if (frameTick > 105){
-    myToadFrame = Toad1;
-    myToadHFrame = Toad1H;
+  if (frameTick > 101){
+    myToadUFrame = Toad1U;
+    myToadLFrame = Toad1L;
+    myToadDFrame = Toad1D;
+    myToadRFrame = Toad1R;
     context.fillStyle = 'black'
-    context.fillRect(targetX, targetY, 67, 50)
-    context.fillRect(targetHX, targetHY, 67, 50)
-    targetY = 475;
-    targetHX = 416.5;
+    context.fillRect(targetUX, targetUY, 67, 50);
+    context.fillRect(targetLX, targetLY, 67, 50);
+    context.fillRect(targetDX, targetDY, 67, 50);
+    context.fillRect(targetRX, targetRY, 67, 50)
+    targetUY = 475;
+    targetLX = 416.5;
+    targetDY = 475;
+    targetRX = 416.5;
   }
-  if (frameTick > 110) {
-    myToadFrame = Toad2;
-    myToadHFrame = Toad2H
+  if (frameTick > 102) {
+    myToadUFrame = Toad2U;
+    myToadLFrame = Toad2L;
+    myToadDFrame = Toad2D;
+    myToadRFrame = Toad2R;
     context.fillStyle = 'black'
-    context.fillRect(targetX, targetY, 67, 50)
-    context.fillRect(targetHX, targetHY, 67, 50)
-    targetY = 450;
-    targetHX = 383;
+    context.fillRect(targetUX, targetUY, 67, 50);
+    context.fillRect(targetLX, targetLY, 67, 50);
+    context.fillRect(targetDX, targetDY, 67, 50);
+    context.fillRect(targetRX, targetRY, 67, 50);
+    targetUY = 450;
+    targetLX = 383;
+    targetDY = 500;
+    targetRX = 450;
   }
-  if (frameTick > 115) {
-    myToadFrame = Toad3;
-    myToadHFrame = Toad3H;
-    targetY = 450;
-    targetHX = 383;
+  if (frameTick > 103) {
+    myToadUFrame = Toad3U;
+    myToadLFrame = Toad3L;
+    myToadDFrame = Toad3D;
+    myToadRFrame = Toad3R;
+    targetUY = 450;
+    targetLX = 383;
+    targetDY = 500;
+    targetRX = 450;
   }
-  if (frameTick > 215){
-    context.fillStyle = 'black'
-    context.fillRect(500, 450, 50,50)
-    context.fillRect(targetHX, targetHY, 67, 50)
-    targetY = 500;
-    targetHX = 450;
+  if (frameTick > 203){
+    context.fillStyle = 'black';
+    context.fillRect(targetUX, targetUY, 67, 50);
+    context.fillRect(targetLX, targetLY, 67, 50);
+    context.fillRect(targetDX, targetDY, 67, 50);
+    context.fillRect(targetRX, targetRY, 67, 50);
+    targetUY = 500;
+    targetLX = 450;
+    targetDY = 450;
+    targetRX = 383;
     frameTick = 0;
   }
   // if (frameTick > 215){
   //   rotation = Math.pi;
   //   myToadFrame = Toad3H;
   // }
-  drawToad(myToadFrame, targetX, targetY);
-  drawHToad(myToadHFrame, targetHX, targetHY)
+  drawToad(myToadUFrame, targetUX, targetUY);
+  drawToad(myToadLFrame, targetLX, targetLY);
+  drawToad(myToadDFrame, targetDX, targetDY);
+  drawToad(myToadRFrame, targetRX, targetRY);
 }
 
 function drawToad(whichToad, x, y) {
   let destinationX = x;
   let destinationY = y;
   context.fillStyle = 'black'
-  context.fillRect(destinationX, destinationY, 50,50)
+  context.fillRect(destinationX, destinationY, 67, 50)
   // context.translate(x, y)
   // context.rotate(rotation);
-  context.drawImage(toadImage, whichToad.sourceX, whichToad.sourceY, whichToad.sourceWidth, whichToad.sourceHeight, destinationX, destinationY, whichToad.destinationWidth, whichToad.destinationHeight);
+  context.drawImage(toadImage, whichToad.sourceX, whichToad.sourceY, whichToad.sourceWidth, whichToad.sourceHeight, destinationX, destinationY, whichToad.sourceWidth, whichToad.sourceHeight);
 }
 
-function drawHToad(whichToad, x, y) {
-  let destinationX = x;
-  let destinationY = y;
-  context.fillStyle = 'black'
-  context.fillRect(destinationX, destinationY, 50,50)
-  // context.translate(x, y)
-  // context.rotate(rotation);
-  context.drawImage(toadImage, whichToad.sourceX, whichToad.sourceY, whichToad.sourceWidth, whichToad.sourceHeight, destinationX, destinationY, whichToad.destinationWidth, whichToad.destinationHeight);
-}
-
-var Toad1 = {
-  sourceX: 63,
+var Toad1U = {
+  sourceX: 62,
   sourceY: 62,
   sourceWidth: 37,
   sourceHeight: 38,
-
-  destinationX: 250,
-  destinationY: 575,
-  destinationWidth: 37,
-  destinationHeight: 38,
 }
 
 
-var Toad2 = {
+var Toad2U = {
   sourceX: 145,
   sourceY: 62,
   sourceWidth: 30,
   sourceHeight: 35,
-
-  destinationX: 300,
-  destinationY: 575,
-  destinationWidth: 30,
-  destinationHeight: 35,
 }
 
-var Toad3 = {
+var Toad3U = {
   sourceX: 221,
   sourceY: 62,
   sourceWidth: 37,
   sourceHeight: 30,
-
-  destinationX: 350,
-  destinationY: 575,
-  destinationWidth: 37,
-  destinationHeight: 30,
 }
 
-var Toad1H = {
+var Toad1L = {
   sourceX: 302,
   sourceY: 62,
   sourceWidth: 37,
   sourceHeight: 37,
-
-  destinationX: 400,
-  destinationY: 575,
-  destinationWidth: 37,
-  destinationHeight: 37,
 }
 
-var Toad2H = {
+var Toad2L = {
   sourceX: 382,
   sourceY: 64,
   sourceWidth: 37,
   sourceHeight: 30,
-
-  destinationX: 450,
-  destinationY: 575,
-  destinationWidth: 37,
-  destinationHeight: 30,
 }
 
-var Toad3H = {
+var Toad3L = {
   sourceX: 457,
   sourceY: 60,
   sourceWidth: 35,
-  sourceHeight: 36,
+  sourceHeight: 38,
+}
 
-  destinationX: 500,
-  destinationY: 575,
-  destinationWidth: 35,
-  destinationHeight: 36,
+var Toad1D = {
+  sourceX: 62,
+  sourceY: 12,
+  sourceWidth: 37,
+  sourceHeight: 38,
+}
+
+
+var Toad2D = {
+  sourceX: 145,
+  sourceY: 12,
+  sourceWidth: 30,
+  sourceHeight: 35,
+}
+
+var Toad3D = {
+  sourceX: 221,
+  sourceY: 12,
+  sourceWidth: 37,
+  sourceHeight: 30,
+}
+
+var Toad1R = {
+  sourceX: 302,
+  sourceY: 12,
+  sourceWidth: 37,
+  sourceHeight: 37,
+}
+
+var Toad2R = {
+  sourceX: 382,
+  sourceY: 14,
+  sourceWidth: 37,
+  sourceHeight: 30,
+}
+
+var Toad3R = {
+  sourceX: 457,
+  sourceY: 10,
+  sourceWidth: 35,
+  sourceHeight: 38,
 }
